@@ -1,0 +1,12 @@
+cervezas:
+    resource: "@CervezasBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+    all_cervezas:
+      path: /cervezas/all
+      defaults: { _controller: CervezasBundle:Cervezas:all }
