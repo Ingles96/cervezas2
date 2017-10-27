@@ -59,9 +59,9 @@ class Cervezas
     /**
      * @var int
      *
-     * @ORM\Column(name="tama¤o", type="integer")
+     * @ORM\Column(name="tamano", type="integer")
      */
-    private $tama¤o;
+    private $tamano;
 
     /**
      * @var \DateTime
@@ -216,27 +216,27 @@ class Cervezas
     }
 
     /**
-     * Set tama¤o
+     * Set tamano
      *
-     * @param integer $tama¤o
+     * @param integer $tamano
      *
      * @return Cervezas
      */
-    public function setTama¤o($tama¤o)
+    public function setTamano($tamano)
     {
-        $this->tama¤o = $tama¤o;
+        $this->tamano = $tamano;
 
         return $this;
     }
 
     /**
-     * Get tama¤o
+     * Get tamano
      *
      * @return int
      */
-    public function getTama¤o()
+    public function getTamano()
     {
-        return $this->tama¤o;
+        return $this->tamano;
     }
 
     /**

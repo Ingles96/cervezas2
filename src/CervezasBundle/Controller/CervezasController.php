@@ -8,13 +8,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CervezasController extends Controller
 {
     /**
-     * @Route("/", name="all")
+     * @Route("/cervezas/{id}", name="all")
      */
-    public function allAction()
+    public function allAction($id)
     {
         $repository = $this->getDoctrine()->getRepository('CervezasBundle:Cervezas');
         // find *all* cervezas
-        $cervezas = $repository->findAll();
-        return $this->render('CervezasBundle:Cervezas:all.html.twig',array("cervezas"=>$cervezas));
+        $cervezas = $repository->findById($id);
+        return $this->render('CervezasBundle:Default:cervezas.html.twig',array("cervezas"=>$cervezas));
     }
 }
